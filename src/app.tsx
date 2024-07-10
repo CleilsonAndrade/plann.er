@@ -5,7 +5,7 @@ export function App() {
   const [isGuestsInputOpen, setIsGuestsInputOpen] = useState(false)
   const [isGuestsModalOpen, setIsGuestsModalOpen] = useState(false)
   const [isConfirmTripModalOpen, setIsConfirmTripModalOpen] = useState(false)
-  const [emailsToInvite, setEmailsToInvite] = useState([])
+  const [emailsToInvite, setEmailsToInvite] = useState([""])
 
   function openGuestsInput() {
     setIsGuestsInputOpen(true)
