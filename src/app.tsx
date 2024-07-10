@@ -1,15 +1,24 @@
-import { ArrowRight, Calendar, MapPin, Settings2, UserRoundPlus } from "lucide-react"
+import { ArrowRight, Calendar, MapPin, Settings2, UserRoundPlus, X } from "lucide-react"
 import { useState } from "react"
 
 export function App() {
-  const [isGuestInputOpen, setIsGuestInputOpen] = useState(false)
+  const [isGuestsInputOpen, setIsGuestsInputOpen] = useState(false)
+  const [isGuestsModalOpen, setIsGuestsModalOpen] = useState(false)
 
-  function openGuestInput() {
-    setIsGuestInputOpen(true)
+  function openGuestsInput() {
+    setIsGuestsInputOpen(true)
   }
 
-  function closeGuestInput() {
-    setIsGuestInputOpen(false)
+  function closeGuestsInput() {
+    setIsGuestsInputOpen(false)
+  }
+
+  function openGuestsModal() {
+    setIsGuestsModalOpen(true)
+  }
+
+  function closeGuestsModal() {
+    setIsGuestsModalOpen(false)
   }
 
   return (
@@ -24,24 +33,24 @@ export function App() {
           <div className="h-16 bg-zinc-900 px-4 rounded-xl flex items-center shadow-shape gap-3">
             <div className="flex items-center gap-2 flex-1">
               <MapPin className="size-5 text-zinc-400" />
-              <input disabled={isGuestInputOpen} type="text" placeholder="Para onde voce vai?" className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1" />
+              <input disabled={isGuestsInputOpen} type="text" placeholder="Para onde voce vai?" className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1" />
             </div>
 
             <div className="flex items-center gap-2">
               <Calendar className="size-5 text-zinc-400" />
-              <input disabled={isGuestInputOpen} type="text" placeholder="Quando?" className="bg-transparent text-lg placeholder-zinc-400 w-40 outline-none" />
+              <input disabled={isGuestsInputOpen} type="text" placeholder="Quando?" className="bg-transparent text-lg placeholder-zinc-400 w-40 outline-none" />
             </div>
 
             <div className="w-px h-6 bg-zinc-800" />
 
             {
-              isGuestInputOpen ? (
-                <button onClick={closeGuestInput} className="bg-zinc-800 text-zinc-200 rounded-lg px-4 py-2 font-medium flex items-center gap-2 hover:bg-zinc-700">
+              isGuestsInputOpen ? (
+                <button onClick={closeGuestsInput} className="bg-zinc-800 text-zinc-200 rounded-lg px-4 py-2 font-medium flex items-center gap-2 hover:bg-zinc-700">
                   Alterar local/data
                   <Settings2 className="size-5" />
                 </button>
               ) : (
-                <button onClick={openGuestInput} className="bg-lime-300 text-lime-950 rounded-lg px-4 py-2 font-medium flex items-center gap-2 hover:bg-lime-400">
+                <button onClick={openGuestsInput} className="bg-lime-300 text-lime-950 rounded-lg px-4 py-2 font-medium flex items-center gap-2 hover:bg-lime-400">
                   Continuar
                   <ArrowRight className="size-5" />
                 </button>
@@ -49,12 +58,13 @@ export function App() {
           </div>
 
           {
-            isGuestInputOpen && (
+            isGuestsInputOpen && (
               <div className="h-16 bg-zinc-900 px-4 rounded-xl flex items-center shadow-shape gap-3">
-                <div className="flex items-center gap-2 flex-1">
+                <button type="button" onClick={openGuestsModal} className="flex items-center gap-2 flex-1 text-left">
                   <UserRoundPlus className="size-5 text-zinc-400" />
-                  <input type="text" placeholder="Quem estará na viagem?" className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1" />
-                </div>
+                  <span className="text-zinc-400 text-lg flex-1s">Quem estará na viagem?</span>
+
+                </button>
 
                 <div className="w-px h-6 bg-zinc-800" />
 
@@ -71,6 +81,19 @@ export function App() {
           Ao planejar sua viagem pela plann.er voce automaticamente concorda<br /> com os nossos <a href="#" className="text-zinc-300 underline">termos de uso</a> e <a href="#" className="text-zinc-300 underline">politicas de privacidade</a>.
         </p>
       </div>
+
+      {isGuestsModalOpen && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
+          <div className="w-[640px] rounded-xl py-5 px-6 shadow-shape bg-zinc-900">
+            <div className="flex items-center justify-between">
+              <h2>Selecionar convidados</h2>
+              <button type="button" onClick={closeGuestsModal}>
+                <X className="size-5 text-zinc-400" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
