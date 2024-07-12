@@ -9,15 +9,20 @@ interface DestinationAndDateStepProps {
   isGuestsInputOpen: boolean,
   closeGuestsInput: () => void,
   openGuestsInput: () => void,
+  setDestination: (destination: string) => void,
+  eventStartAndEndDates: DateRange | undefined
+  setEventStartAndEndDate: (dates: DateRange | undefined) => void,
 }
 
 export function DestinationAndDateStep({
   isGuestsInputOpen,
   closeGuestsInput,
   openGuestsInput,
+  setDestination,
+  eventStartAndEndDates,
+  setEventStartAndEndDate,
 }: DestinationAndDateStepProps) {
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false)
-  const [eventStartAndEndDates, setEventStartAndEndDate] = useState<DateRange | undefined>()
 
   function openDatePicker() {
     return setIsDatePickerOpen(true)
@@ -35,7 +40,13 @@ export function DestinationAndDateStep({
     <div className="h-16 bg-zinc-900 px-4 rounded-xl flex items-center shadow-shape gap-3">
       <div className="flex items-center gap-2 flex-1">
         <MapPin className="size-5 text-zinc-400" />
-        <input disabled={isGuestsInputOpen} type="text" placeholder="Para onde voce vai?" className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1" />
+        <input
+          disabled={isGuestsInputOpen}
+          type="text"
+          placeholder="Para onde voce vai?"
+          className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1"
+          onChange={event => setDestination(event.target.value)}
+        />
       </div>
 
       <button
@@ -61,7 +72,11 @@ export function DestinationAndDateStep({
                   </button>
                 </div>
               </div>
-              <DayPicker mode="range" selected={eventStartAndEndDates} onSelect={setEventStartAndEndDate} />
+              <DayPicker
+                mode="range"
+                selected={eventStartAndEndDates}
+                onSelect={setEventStartAndEndDate}
+              />
             </div>
           </div>
         )
