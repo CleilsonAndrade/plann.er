@@ -1,8 +1,8 @@
+import { Button } from "@/components/button";
+import { api } from "@/lib/axios";
 import { Calendar, Plus, Tag, X } from "lucide-react";
 import { FormEvent } from "react";
 import { useParams } from "react-router-dom";
-import { Button } from "../../components/button";
-import { api } from "../../lib/axios";
 
 interface CreateActivityModalProps {
   closeCreateActivityModalOpen: () => void;

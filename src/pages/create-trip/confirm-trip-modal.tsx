@@ -1,6 +1,6 @@
+import { Button } from "@/components/button";
 import { AtSign, Plus, User, X } from "lucide-react";
 import { FormEvent } from "react";
-import { Button } from "../../components/button";
 
 interface ConfirmTripModalProps {
   closeConfirmTripModal: () => void,

@@ -1,9 +1,9 @@
+import { Button } from "@/components/button";
 import { format } from "date-fns";
 import { ArrowRight, Calendar, MapPin, Settings2, X } from "lucide-react";
 import { useState } from "react";
 import { DateRange, DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
-import { Button } from "../../../components/button";
 
 interface DestinationAndDateStepProps {
   isGuestsInputOpen: boolean,
