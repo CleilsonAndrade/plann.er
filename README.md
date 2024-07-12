@@ -1,7 +1,7 @@
 <div align="center">
     <h1 align="center">plann.er$</h1>
     <!-- <p>Aplicação de controle financeiro, que permite ter o cadastro de valores de entrada e saída includo datas e logica para calculo em tempo real, com opções de exclusão de valores oferecendo atualização em tempo real e valores totais de entrada e saída. Desenvolvido utilizando as tecnologias web HTML, CSS e JavaScript.</p> -->
-    <!-- <img src="./design/desktop.svg" alt="Logo" width="800"> -->
+    <img src="./design/desktop.png" alt="Logo" width="600">
 </div>
 
 
