@@ -93,7 +93,7 @@ export function DestinationAndDateStep({
         ) : (
           <Button onClick={openGuestsInput} variant="primary">
             Continuar
-            < ArrowRight className="size-5" />
+            <ArrowRight className="size-5" />
           </Button >
         )
       }

@@ -20,10 +20,27 @@ export function CreateTripPage() {
   const [eventStartAndEndDates, setEventStartAndEndDate] = useState<DateRange | undefined>()
 
   function openGuestsInput() {
+    if (!destination) {
+      return
+    }
+
+    if (!eventStartAndEndDates?.from || !eventStartAndEndDates.to) {
+      return
+    }
+
     setIsGuestsInputOpen(true)
   }
 
   function closeGuestsInput() {
+    if (!destination) {
+      return
+    }
+
+    if (!eventStartAndEndDates?.from || !eventStartAndEndDates.to) {
+      return
+    }
+
+
     setIsGuestsInputOpen(false)
   }
 
