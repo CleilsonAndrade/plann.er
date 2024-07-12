@@ -68,8 +68,7 @@ export function ImportantLinks() {
         onClick={openImportantLinkModal}
         variant="secondary"
         size="full">
-        <Plus className="size-5"
-        />
+        <Plus className="size-5" />
         Cadastrar novo link
       </Button>
 
