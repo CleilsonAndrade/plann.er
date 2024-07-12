@@ -13,7 +13,7 @@ export function CreateTripPage() {
   const [isGuestsInputOpen, setIsGuestsInputOpen] = useState(false)
   const [isGuestsModalOpen, setIsGuestsModalOpen] = useState(false)
   const [isConfirmTripModalOpen, setIsConfirmTripModalOpen] = useState(false)
-  const [emailsToInvite, setEmailsToInvite] = useState([""])
+  const [emailsToInvite, setEmailsToInvite] = useState<string[]>([])
   const [destination, setDestination] = useState('')
   const [ownerName, setOwnerName] = useState('')
   const [ownerEmail, setOwnerEmail] = useState('')
