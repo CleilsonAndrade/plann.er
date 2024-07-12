@@ -1,37 +1,82 @@
 <div align="center">
     <h1 align="center">plann.er$</h1>
-    <!-- <p>Aplicação de controle financeiro, que permite ter o cadastro de valores de entrada e saída includo datas e logica para calculo em tempo real, com opções de exclusão de valores oferecendo atualização em tempo real e valores totais de entrada e saída. Desenvolvido utilizando as tecnologias web HTML, CSS e JavaScript.</p> -->
+    <p>plann.er é um aplicação para montar planos de viagem com amigos, registrar atividades e links úteis. Utilizando tecnologias como React, Vite e TypeScript, sendo um client web.</p>
     <img src="./design/desktop.png" alt="Logo" width="600">
 </div>
 
+# 📒 Índice
+* [Descrição](#descrição)
+* [Requisitos Funcionais](#requisitos)
+  * [Features](#features)
+* [Tecnologias](#tecnologias)
+* [Design](#design)
+  * [Cores](#cores)
+  * [Fontes](#fontes)
+  * [Ícones](#ícones)
+* [Instalação](#instalação)
+* [Licença](#licença)
 
-# React + TypeScript + Vite
+# 📃 <span id="descrição">Descrição</span>
+Aplicação desenvolvida com fins de montar planos de viagem com amigos, registrar atividades e links úteis. Trabalhando com datas, conceitos de estado e imutabilidade, componentização e requisição a API externa.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📌 <span id="requisitos">Requisitos Funcionais</span>
+- [x] Validação de local e data<br>
+- [x] Cadastro de convidados via e-mail<br>
+- [x] Cadastro do nome e-mail do organizador<br>
+- [x] Cadastro de atividades com horário e data dentro das datas definidas e exibição<br>
+- [x] Cadastro de links importantes e exibição<br>
+- [x] Exibição de convidados identificando os confirmados e nao confirmados<br>
 
-Currently, two official plugins are available:
+## Features
+- [x] Requisição a API<br>
+- [x] Responsividade<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 💻 <span id="tecnologias">Tecnologias</span>
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **TypeScript**
+- **Vite**
+- **ReactJS**
+- **React Router DOM**
+- **React DayPicker**
+- **tailwind**
+- **tailwind-variants**
+- **date-fns**
 
-## Expanding the ESLint configuration
+# 🎨 <span id="design">Design</span>
+- O modelo final para versão desktop e mobile está disponível na pasta `./design`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- <span id="cores">Cores<br></span>
+  * #09090B<br>
+  * #A3E635<br>
+  * #A1A1A6<br>
+  * #FAFAFA<br>
 
-- Configure the top-level `parserOptions` property like this:
+- <span id="fontes">Fontes<br></span>
+  * Inter, sans-serif
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- <span id="ícones">Ícones<br></span>
+  * Lucide React
+
+# 🚀 <span id="instalação">Instalação</span>
+```bash
+  # Clone este repositório:
+  $ git clone https://github.com/CleilsonAndrade/plann.er.git
+  $ cd ./plann.er
+
+  # Instalar as dependências:
+  $ yarn install
+
+  # Executar:
+  $ yarn dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# 📝 <span id="licença">Licença</span>
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+<p align="center">
+  Feito com 💜 by CleilsonAndrade
+</p>
