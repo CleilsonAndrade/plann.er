@@ -1,5 +1,5 @@
 <div align="center">
-    <h1 align="center">plann.er$</h1>
+    <h1 align="center">plann.er</h1>
     <p>plann.er é um aplicação para montar planos de viagem com amigos, registrar atividades e links úteis. Utilizando tecnologias como React, Vite e TypeScript, sendo um client web.</p>
     <img src="./design/desktop.png" alt="Logo" width="800">
 </div>
